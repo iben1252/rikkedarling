@@ -1,2 +1,1 @@
-# rikkedarling
 eksamensprojekt
