@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+}
+
+#sectionwrapper {
+    background-image: url(billeder/abstrakt-maleri-salg-shadows2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+
+}
+
+#logo {
+    width: 500px;
+    padding: 100px 440px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+li {
+    float: right;
+    padding-right: 20px;
+}
+
+li a {
+    display: block;
+    color: #969494;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Copperplate";
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.slideshow-container {
+    padding: 50px 50px;
+}
+
+
+/* produkte  side */
+
+.hovedmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.hovedmenu li {
+    float: right;
+    padding-right: 20px;
+}
+
+.hovedmenu li a {
+      display: block;
+    color: #969494;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Copperplate";
+    font-style: normal;
+    font-weight: lighter;
+}
+
+/* pop up */
+#popup {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.86);
+    overflow: scroll;
+}
+
+
+#indhold {
+    box-sizing: border-box;
+    width: 50vw;
+    margin: auto;
+    background-color: white;
+}
+
+#luk {
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 24vw;
+    padding-right: 1em;
+    font-family: 'Crimson Text', serif;
+
+}
+
+#luk button {
+    font-size: 2em;
+    box-shadow: 7px 4px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* filtering */
+.overskrift {
+    font-family: 'Crimson Text', serif
+}
+
+
+.menu {
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.menu button {
+    font-size: 1.75vw;
+    font-family: 'Crimson Text', serif;
+    margin: 1.5vw;
+    border-radius: 25px;
+
+}
+
+.menu button:hover {
+    background-color: darkseagreen;
+}
+
+.produkt {
+    border: 1px black;
+    margin: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    box-shadow: 7px 15px 15px 0 rgba(0, 0, 0, 0.4);
+    font-family: 'Crimson Text', serif;
+
+}
+
+.billede img {
+    max-width: 100%;
+
+}
+
+.billede {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+
+}
+
+#liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+h1 {
+    font-family: 'Crimson Text', serif;
+
+}
+
+p {
+    font-family: 'Crimson Text', serif;
+}
+
+.valgt {
+    background-color: darkseagreen;
+}

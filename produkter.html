@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rikke Darling</title>
+</head>
+
+<body>
+
+    <div id="popup">
+        <div id="luk"><button>X</button></div>
+        <div id="indhold"></div>
+    </div>
+
+
+    <header>
+        <nav class="hovedmenu">
+            <ul>
+                <li><a href="om_darling.html">Om Rikke Darling</a></li>
+                <li><a href="produkter.html">Produkter</a></li>
+            </ul>
+        </nav>
+
+        <nav class="menu">
+            <button class="filter" data-produkt="Limited">Limited edition</button>
+            <button class="filter" data-produkt="Puder">Puder</button>
+            <button class="filter" data-produkt="Krukker">Krukker</button>
+            <button class="filter" data-produkt="Skamler">Skamler</button>
+            <button class="filter" data-produkt="Plakater">Plakater</button>
+            <button class="filter" data-produkt="Tæpper">Tæpper</button>
+            <button class="filter" data-produkt="Ur">Ur</button>
+            <button class="filter" data-produkt="Akustikplader">Akustikplader</button>
+            <button class="filter" data-produkt="Fliser">Fliser</button>
+            <button class="filter" data-produkt="Tøj">Tøj</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="overskrift">
+            <h2></h2>
+        </div>
+        <div id="liste"></div>
+
+    </main>
+
+
+    <script>
+        let produkt = [];
+        let filter = "alle";
+
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            let dest = document.querySelector("#liste");
+
+            async function getJson() {
+                let jsonData = await fetch("http://ibenbording.dk/kea/2_sem_eksamen/rikke_darling/wordpress/wp-json/wp/v2/produkter?per_page=50");
+                produkt = await jsonData.json();
+                produkt.sort((a, b) => {
+                    return a.type.localeCompare(b.type);
+                });
+                visProdukt();
+            }
+
+
+            function visProdukt() {
+                dest.innerHTML = "";
+                produkt.forEach((alleProdukt) => {
+                    if (filter == "alle" || filter == alleProdukt.kategori) {
+                        let template = `
+                        <div class="produkt">
+                            <div class="billede">
+                                <img src="${alleProdukt.image.guid}">
+                            </div>
+                            <h2>${alleProdukt.title.rendered}</h2>
+                            <p><strong>Pris:</strong> ${alleProdukt.pris} DKK</p>
+                        </div>`;
+                        dest.insertAdjacentHTML("beforeend", template);
+                        dest.lastElementChild.addEventListener("click", åbn);
+
+                        function åbn() {
+                            console.log("åbn kører");
+                            document.querySelector("#indhold").innerHTML = `
+                            <div class="produkt">
+<h2>${alleProdukt.navn}</h2>
+                                <div class="billede">
+                                    <img src="${alleProdukt.image.guid}">
+                                </div>
+                                <p><strong>Kategori:</strong> ${alleProdukt.kategori}</p>
+                                <p><strong>Beskrivelse:</strong> ${alleProdukt.beskrivelse}</p>
+                                <p><strong>Pris:</strong> ${alleProdukt.pris} DKK</p>
+                            </div>`;
+                            document.querySelector("#popup").style.display = "block";
+
+                        }
+
+                    }
+
+                })
+            }
+
+            document.querySelector("#luk button").addEventListener("click", () => {
+                document.querySelector("#popup").style.display = "none";
+            })
+
+
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+            })
+
+            function filtrering() {
+                console.log("filtrerer");
+                filter = this.getAttribute("data-produkt");
+                document.querySelector("h2").textContent = this.textContent;
+                document.querySelectorAll(".filter").forEach(elm => {
+                    elm.classList.remove("valgt");
+                })
+                this.classList.add("valgt");
+                visProdukt();
+            }
+
+            getJson();
+        }
+    </script>
+
+</body>
+
+
+</html>
