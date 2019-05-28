@@ -68,7 +68,7 @@
             let dest = document.querySelector("#liste");
 
             async function getJson() {
-                let jsonData = await fetch("http://ibenbording.dk/kea/2_sem_eksamen/rikke_darling/wordpress/wp-json/wp/v2/produkter?per_page=50");
+                let jsonData = await fetch("http://ibenbording.dk/kea/2_sem_eksamen/rikke_darling/wordpress/wp-json/wp/v2/produkter?per_page=100");
                 produkt = await jsonData.json();
                 produkt.sort((a, b) => {
                     return a.type.localeCompare(b.type);
@@ -87,7 +87,7 @@
                                 <img src="${alleProdukt.image.guid}">
                             </div>
                             <h2>${alleProdukt.title.rendered}</h2>
-                            <p><strong>Pris:</strong> ${alleProdukt.pris} DKK</p>
+                            <p><strong></strong> ${alleProdukt.pris} DKK</p>
                         </div>`;
                         dest.insertAdjacentHTML("beforeend", template);
                         dest.lastElementChild.addEventListener("click", åbn);
@@ -96,7 +96,7 @@
                             console.log("åbn kører");
                             document.querySelector("#indhold").innerHTML = `
                             <div class="produkt">
-<h2>${alleProdukt.navn}</h2>
+                                <h2>${alleProdukt.navn}</h2>
                                 <div class="billede">
                                     <img src="${alleProdukt.image.guid}">
                                 </div>

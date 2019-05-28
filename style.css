@@ -97,7 +97,9 @@ li a {
     text-align: right;
     margin-right: 24vw;
     padding-right: 1em;
-    font-family: 'Crimson Text', serif;
+    font-family: "Copperplate";
+    font-style: normal;
+    font-weight: lighter;
 
 }
 
@@ -108,34 +110,49 @@ li a {
 
 /* filtering */
 .overskrift {
-    font-family: 'Crimson Text', serif
+    font-family: "Copperplate";
 }
 
 
 .menu {
     text-align: center;
     flex-wrap: wrap;
+    background-color: #959595;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+    padding: 0.5vw;
+
 }
 
 .menu button {
-    font-size: 1.75vw;
-    font-family: 'Crimson Text', serif;
-    margin: 1.5vw;
-    border-radius: 25px;
+    font-size: 1.50rem;
+    margin: 0.5vw;
+    border-radius: 5px;
+    font-family: "Copperplate";
+    border: none;
+    background-color: #959595;
+    color: white;
+    font-style: normal;
+    font-weight: lighter;
 
 }
 
 .menu button:hover {
-    background-color: darkseagreen;
+    color: black;
 }
 
+
 .produkt {
-    border: 1px black;
+    /*    border: 1px black;*/
     margin: 10px;
     padding: 10px;
     flex-wrap: wrap;
-    box-shadow: 7px 15px 15px 0 rgba(0, 0, 0, 0.4);
-    font-family: 'Crimson Text', serif;
+    /*    box-shadow: 7px 15px 15px 0 rgba(0, 0, 0, 0.4);*/
+    font-family: "Copperplate";
+    border-color: #959595;
+    font-style: normal;
+    font-weight: lighter;
+
 
 }
 
@@ -150,25 +167,37 @@ li a {
 
 h2 {
     text-align: center;
-    font-family: 'Crimson Text', serif;
+    font-family: "Copperplate";
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 1.5rem;
 
 }
 
 #liste {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 0.98fr));
+    margin: 10vw;
+    margin-top: 0.5vw;
+    position: center;
+
 
 }
 
 h1 {
-    font-family: 'Crimson Text', serif;
+    font-family: "Copperplate";
+    font-style: normal;
+    font-weight: lighter;
 
 }
 
 p {
-    font-family: 'Crimson Text', serif;
+    font-family: "Copperplate";
+    font-style: normal;
+    font-weight: lighter;
+    text-align: center;
 }
 
 .valgt {
-    background-color: darkseagreen;
+    color: black;
 }
