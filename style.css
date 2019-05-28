@@ -46,6 +46,27 @@ li a {
     padding: 50px 50px;
 }
 
+/* logo */
+
+.logo {
+    position: relative;
+    padding: 1vw;
+    text-align: right;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+}
+
+.logo img {
+    max-width: 15vw;
+    max-height: 6.4vw;
+    align-self: flex-start;
+    flex-grow: 1;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 /* produkte  side */
 
