@@ -19,10 +19,6 @@
 
 <body>
 
-    <div id="popup">
-        <div id="luk"><button>X</button></div>
-        <div id="indhold"></div>
-    </div>
 
 
     <header>
@@ -54,6 +50,12 @@
         </nav>
     </header>
 
+   <div id="popup">
+        <div id="luk"><button>X</button></div>
+        <div id="indhold"></div>
+    </div>
+
+
     <main>
         <div class="overskrift">
             <h2></h2>
@@ -64,21 +66,6 @@
 
 
     <script>
-        document.querySelector("#menuknap").addEventListener("click", toggleMenu);
-
-        function toggleMenu() {
-            console.log("Toogle menu");
-            document.querySelector("#menu").classList.toggle("hidden");
-
-            let erSkjult = document.querySelector("#menu").classList.contains("hidden");
-
-
-            if (erSkjult == true) {
-                document.querySelector("#menuknap").textContent = "☰";
-            } else {
-                document.querySelector("#menuknap").textContent = "X";
-            }
-        }
 
         let produkt = [];
         let filter = "alle";
@@ -108,7 +95,7 @@
                             <div class="billede">
                                 <img src="${alleProdukt.image.guid}">
                             </div>
-                            <h2>${alleProdukt.title.rendered}</h2>
+                                <h2>${alleProdukt.title.rendered}</h2>
                             <p><strong></strong> ${alleProdukt.pris} DKK</p>
                         </div>`;
                         dest.insertAdjacentHTML("beforeend", template);
@@ -118,13 +105,11 @@
                             console.log("åbn kører");
                             document.querySelector("#indhold").innerHTML = `
                             <div class="produkt">
-                                <h2>${alleProdukt.navn}</h2>
                                 <div class="billede">
                                     <img src="${alleProdukt.image.guid}">
                                 </div>
-                                <p><strong>Kategori:</strong> ${alleProdukt.kategori}</p>
-                                <p><strong>Beskrivelse:</strong> ${alleProdukt.beskrivelse}</p>
-                                <p><strong>Pris:</strong> ${alleProdukt.pris} DKK</p>
+                                    <p><strong>Beskrivelse:</strong> ${alleProdukt.beskrivelse}</p>
+                                    <p><strong>Pris:</strong> ${alleProdukt.pris} DKK</p>
                             </div>`;
                             document.querySelector("#popup").style.display = "block";
 

@@ -101,8 +101,9 @@ li a {
     height: 100vh;
     position: fixed;
     display: none;
-    background-color: rgba(255, 255, 255, 0.86);
+    background-color: rgba(204, 202, 202, 0.59);
     overflow: scroll;
+    top: 0;
 }
 
 
@@ -113,20 +114,49 @@ li a {
     background-color: white;
 }
 
-#luk {
-    box-sizing: border-box;
+#luk button {
+    /*    box-sizing: border-box;*/
     text-align: right;
     margin-right: 24vw;
     padding-right: 1em;
-    font-family: "Copperplate";
-    font-style: normal;
-    font-weight: lighter;
+
 
 }
 
 #luk button {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    border: 0;
     font-size: 2em;
-    box-shadow: 7px 4px 15px 0 rgba(0, 0, 0, 0.4);
+
+    font-style: normal;
+    font-weight: lighter;
+}
+
+
+#luk button:hover {
+    opacity: 1;
+}
+
+#luk button:before,
+#luk button:after {
+    position: absolute;
+    left: 15px;
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+
+#luk button:before {
+    transform: rotate(45deg);
+}
+
+#luk button:after {
+    transform: rotate(-45deg);
 }
 
 /* filtering */
@@ -164,21 +194,19 @@ li a {
 
 
 .produkt {
-    /*    border: 1px black;*/
     margin: 10px;
     padding: 10px;
     flex-wrap: wrap;
-    /*    box-shadow: 7px 15px 15px 0 rgba(0, 0, 0, 0.4);*/
     font-family: "Copperplate";
     border-color: #959595;
     font-style: normal;
     font-weight: lighter;
 
-
 }
 
 .billede img {
-    max-width: 100%;
+    max-width: 80%;
+    background-color: white;
 
 }
 
