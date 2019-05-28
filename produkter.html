@@ -104,12 +104,19 @@
                         function åbn() {
                             console.log("åbn kører");
                             document.querySelector("#indhold").innerHTML = `
-                            <div class="produkt">
+                            <div class="produkt1">
                                 <div class="billede">
                                     <img src="${alleProdukt.image.guid}">
                                 </div>
+
+                                <div class="beskrivelse">
                                     <p><strong>Beskrivelse:</strong> ${alleProdukt.beskrivelse}</p>
-                                    <p><strong>Pris:</strong> ${alleProdukt.pris} DKK</p>
+
+                                </div>
+                                <div></div>
+                                <div class="pris">
+                                        <p><strong>Pris:</strong> ${alleProdukt.pris} DKK</p>
+                                </div>
                             </div>`;
                             document.querySelector("#popup").style.display = "block";
 

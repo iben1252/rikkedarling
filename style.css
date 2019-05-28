@@ -204,6 +204,21 @@ li a {
 
 }
 
+.produkt1 {
+    margin: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+    font-family: "Copperplate";
+    border-color: #959595;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.beskrivelse {
+    text-align: left;
+}
+
+
 .billede img {
     max-width: 80%;
     background-color: white;
@@ -244,7 +259,15 @@ p {
     font-family: "Copperplate";
     font-style: normal;
     font-weight: lighter;
-    text-align: center;
+    text-align: left;
+}
+
+.pris p {
+    font-family: "Copperplate";
+    font-style: normal;
+    font-weight: lighter;
+    text-align: right;
+    font-size: 1.25vw;
 }
 
 .valgt {
