@@ -255,13 +255,28 @@ h1 {
 
 }
 
+h3 {
+    font-family: "Copperplate";
+    font-style: normal;
+    font-weight: bold;
+    text-align: left;
+}
+
 p {
     font-family: "Copperplate";
     font-style: normal;
     font-weight: lighter;
-    text-align: left;
+    text-align: center;
 }
 
+.beskrivelse p {
+    font-family:'Avenir Next';
+    font-style: normal;
+    font-weight: bolder;
+    text-align: left;
+    font-size: 1vw;
+
+}
 .pris p {
     font-family: "Copperplate";
     font-style: normal;
