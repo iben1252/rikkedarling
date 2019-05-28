@@ -270,13 +270,14 @@ p {
 }
 
 .beskrivelse p {
-    font-family:'Avenir Next';
+    font-family: 'Avenir Next';
     font-style: normal;
     font-weight: bolder;
     text-align: left;
     font-size: 1vw;
 
 }
+
 .pris p {
     font-family: "Copperplate";
     font-style: normal;
@@ -288,3 +289,50 @@ p {
 .valgt {
     color: black;
 }
+
+
+/************ OM RIKKE DARLING ********************/
+.section {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Copperplate';
+    margin: 10px;
+}
+
+.column {
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin: 15px;
+    border: 4px solid none;
+    padding: 20px;
+}
+
+.row {
+    float: left;
+    width: 40%;
+
+}
+
+/* Clear floats after the columns */
+.column:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.section .column p {
+    font-family: 'Avenir Next';
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.25vw;
+}
+
+.column1 {
+    flex-basis: 200px;
+    flex-grow: 1;
+    margin-top: 6px;
+    padding: 20px;
+}
+
