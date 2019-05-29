@@ -36,6 +36,9 @@
             </ul>
         </nav>
 
+        <div class="burger">
+            burger
+        </div>
         <nav class="menu">
             <button class="filter" data-produkt="Limited">Limited edition</button>
             <button class="filter" data-produkt="Puder">Puder</button>
@@ -108,14 +111,16 @@
                                 <div class="billede">
                                     <img src="${alleProdukt.image.guid}">
                                 </div>
-
-                                <div class="beskrivelse">
+                                <div class="tekst">
+                                    <div class="beskrivelse">
                                     <h3>Beskrivelse</h3>
-                                    <p>${alleProdukt.beskrivelse}</p>
-                                </div>
-                                <div></div>
-                                <div class="pris">
+                                        <p>${alleProdukt.beskrivelse}</p>
+                                    </div>
+                                    <div>
+                                    </div>
+                                    <div class="pris">
                                         <p><strong>Pris:</strong> ${alleProdukt.pris} DKK</p>
+                                    </div>
                                 </div>
                             </div>`;
                             document.querySelector("#popup").style.display = "block";
@@ -148,6 +153,31 @@
             }
 
             getJson();
+
+            document.querySelector(".burger").addEventListener("click", openBurger);
+
+
+            function openBurger(){
+                document.querySelector(".menu").style.display="block";
+                document.querySelector("button").style.display="block";
+                closeBurger();
+
+                document.querySelector(".burger").removeEventListener("click", openBurger);
+                document.querySelector(".burger").addEventListener("click", closeBurger);
+            }
+
+
+            function closeBurger(){
+                document.querySelector(".menu").style.display="none";
+                document.querySelector("button").style.display="none";
+                document.querySelector(".burger").addEventListener("click", openBurger);
+                document.querySelector(".burger").addEventListener("click", closeBurger);
+
+
+
+
+
+            }
         }
 
     </script>
