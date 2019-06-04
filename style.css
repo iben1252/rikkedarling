@@ -1,342 +1,351 @@
 body {
-    margin: 0;
+	margin: 0;
 }
 
 #sectionwrapper {
-    background-image: url(billeder/abstrakt-maleri-salg-shadows2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 500px;
+	background-image: url(billeder/abstrakt-maleri-salg-shadows2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
 
 }
 
 #logo {
-    width: 500px;
-    padding: 100px 440px;
+	width: 40%;
+	padding: 10% 29.5%;
+}
 
+#logo img {
+	width: 100%;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
 }
 
 li {
-    float: right;
-    padding-right: 20px;
+	float: right;
+	padding-right: 20px;
 }
 
 li a {
-    display: block;
-    color: #969494;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: "Copperplate";
-    font-style: normal;
-    font-weight: lighter;
+	display: block;
+	color: #969494;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-family: "Copperplate";
+	font-style: normal;
+	font-weight: lighter;
+	cursor: pointer;
 }
 
 .slideshow-container {
-    padding: 50px 50px;
+	padding: 50px 50px;
 }
 
 /* logo */
 
 .logo {
-    position: relative;
-    padding: 1vw;
-    text-align: right;
-    margin-top: 0.5vw;
-    margin-left: 1vw;
+	position: relative;
+	padding: 0.25em;
+	text-align: right;
+	margin-top: 0.5em;
+	margin-left: 0.6em;
+	cursor: pointer;
 }
 
 .logo img {
-    max-width: 15vw;
-    max-height: 6.4vw;
-    align-self: flex-start;
-    flex-grow: 1;
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
+	max-width: 10em;
+	max-height: 6em;
+	align-self: flex-start;
+	flex-grow: 1;
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 
 /* produkte  side */
 
 .hovedmenu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
 }
 
 .hovedmenu li {
-    float: right;
-    padding-right: 20px;
+	float: right;
+	padding-right: 20px;
 }
 
 .hovedmenu li a {
-    display: block;
-    color: #969494;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: "Copperplate";
-    font-style: normal;
-    font-weight: lighter;
+	display: block;
+	color: #969494;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-family: "Copperplate";
+	font-style: normal;
+	font-weight: lighter;
 }
 
 /* pop up */
 #popup {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    display: none;
-    background-color: rgba(204, 202, 202, 0.59);
-    overflow: scroll;
-    top: 0;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	display: none;
+	background-color: rgba(204, 202, 202, 0.59);
+	overflow: scroll;
+	top: 0;
 }
 
 
 #indhold {
-    box-sizing: border-box;
-    width: 65vw;
-    margin: auto;
-    background-color: white;
+	box-sizing: border-box;
+	width: 65vw;
+	margin: auto;
+	background-color: white;
+	cursor: pointer;
 }
 
 #luk button {
-    /*    box-sizing: border-box;*/
-    text-align: right;
-    margin-right: 24vw;
-    padding-right: 1em;
+	/*    box-sizing: border-box;*/
+	text-align: right;
+	margin-right: 25vw;
+	padding-right: 1em;
+	cursor: pointer;
 
 }
 
 #luk button {
-    position: absolute;
-    right: -6vw;
-    top: 1vw;
-    width: 3vw;
-    height: 3vw;
-    opacity: 0.3;
-    border: 0;
-    font-size: 2em;
+	position: absolute;
+	right: -6vw;
+	top: 1vw;
+	width: 3vw;
+	height: 3vw;
+	opacity: 0.3;
+	border: 0;
+	font-size: 2em;
 
-    font-style: normal;
-    font-weight: lighter;
+	font-style: normal;
+	font-weight: lighter;
 }
 
 
 #luk button:hover {
-    opacity: 1;
+	opacity: 1;
 }
 
 #luk button:before,
 #luk button:after {
-    position: absolute;
-    left: 15px;
-    height: 33px;
-    width: 2px;
-    background-color: #333;
+	position: absolute;
+	left: 15px;
+	height: 33px;
+	width: 2px;
+	background-color: #333;
 }
 
 #luk button:before {
-    transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 #luk button:after {
-    transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 /* filtering */
 .overskrift {
-    font-family: "Copperplate";
+	font-family: "Copperplate";
 }
 
 
 .menu {
-    text-align: center;
-    flex-wrap: wrap;
-    background-color: #959595;
-    margin-bottom: 1vw;
-    margin-top: 1vw;
-    padding: 0.5vw;
+	text-align: center;
+	flex-wrap: wrap;
+	background-color: #959595;
+	margin-bottom: 1vw;
+	margin-top: 1vw;
+	padding: 0.5vw;
 
 }
 
 .menu button {
-    font-size: 1.50rem;
-    margin: 0.5vw;
-    border-radius: 5px;
-    font-family: "Copperplate";
-    border: none;
-    background-color: #959595;
-    color: white;
-    font-style: normal;
-    font-weight: lighter;
-
+	font-size: 1.50rem;
+	margin: 0.5vw;
+	border-radius: 5px;
+	font-family: "Copperplate";
+	border: none;
+	background-color: #959595;
+	color: white;
+	font-style: normal;
+	font-weight: lighter;
+	cursor: pointer;
 }
 
 .menu button:hover {
-    color: black;
+	color: black;
 }
 
 
 .produkt {
-    margin: 10px;
-    padding: 10px;
-    flex-wrap: wrap;
-    font-family: "Copperplate";
-    border-color: #959595;
-    font-style: normal;
-    font-weight: lighter;
+	margin: 10px;
+	padding: 10px;
+	flex-wrap: wrap;
+	font-family: "Copperplate";
+	border-color: #959595;
+	font-style: normal;
+	font-weight: lighter;
+	cursor: pointer;
 
 }
 
 .produkt1 {
-    margin: 0.5vw;
-    padding: 2vw;
-    flex-wrap: wrap;
-    font-family: "Copperplate";
-    border-color: #959595;
-    font-style: normal;
-    font-weight: lighter;
-    flex-direction: row;
-    display: flex;
-    flex-basis: 60vw;
+	margin: 0.5vw;
+	padding: 2vw;
+	flex-wrap: wrap;
+	font-family: "Copperplate";
+	border-color: #959595;
+	font-style: normal;
+	font-weight: lighter;
+	flex-direction: row;
+	display: flex;
+	flex-basis: 60vw;
+	cursor: auto;
 }
 
 .produkt1 .billede,
 .tekst {
-    flex-grow: 2;
-    flex-basis: 30vw;
+	flex-grow: 2;
+	flex-basis: 30vw;
 }
 
 
-.produkt1 .billede img{
-    max-height: 65%;
-    max-width: 90%;
+.produkt1 .billede img {
+	max-height: 65%;
+	max-width: 90%;
 }
 
-.produkt1 .beskrivelse .tekst{
-    display: flex;
+.produkt1 .beskrivelse .tekst {
+	display: flex;
 }
 
 .beskrivelse {
-    text-align: left;
-    flex-basis: 20vw;
+	text-align: left;
+	flex-basis: 20vw;
 }
 
-.pris{
-    flex-grow: 1;
+.pris {
+	flex-grow: 1;
 }
 
 
 .billede img {
-    max-width: 80%;
-    background-color: white;
+	max-width: 80%;
+	background-color: white;
 
 }
 
 .billede {
-    text-align: center;
+	text-align: center;
 }
 
 h2 {
-    text-align: center;
-    font-family: "Copperplate";
-    font-style: normal;
-    font-weight: lighter;
-    font-size: 1.5rem;
+	text-align: center;
+	font-family: "Copperplate";
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 1.5rem;
 
 }
 
 #liste {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 0.98fr));
-    margin: 10vw;
-    margin-top: 0.5vw;
-    position: center;
-
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 0.98fr));
+	margin: 10vw;
+	margin-top: 0.5vw;
+	position: center;
 
 }
 
 h1 {
-    font-family: "Copperplate";
-    font-style: normal;
-    font-weight: lighter;
+	font-family: "Copperplate";
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 1.4em;
 
 }
 
 h3 {
-    font-family: "Copperplate";
-    font-style: normal;
-    font-weight: bold;
-    text-align: left;
+	font-family: "Copperplate";
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
 }
 
 p {
-    font-family: "Copperplate";
-    font-style: normal;
-    font-weight: lighter;
-    text-align: center;
+	font-family: "Copperplate";
+	font-style: normal;
+	font-weight: lighter;
+	text-align: center;
 }
 
 .beskrivelse p {
-    font-family: 'Avenir Next';
-    font-style: normal;
-    font-weight: bolder;
-    text-align: left;
-    font-size: 1vw;
+	font-family: 'Avenir Next';
+	font-style: normal;
+	font-weight: bolder;
+	text-align: left;
+	font-size: 1vw;
 
 }
 
 .pris p {
-    font-family: "Copperplate";
-    font-style: normal;
-    font-weight: lighter;
-    text-align: right;
-    font-size: 1.25vw;
+	font-family: "Copperplate";
+	font-style: normal;
+	font-weight: lighter;
+	text-align: right;
+	font-size: 1.25vw;
 }
 
 .valgt {
-    color: black;
+	color: black;
 }
 
 
 /************ OM RIKKE DARLING ********************/
 .section {
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: 'Copperplate';
-    margin: 50px;
-    text-align: center;
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: 'Copperplate';
+	margin: 50px;
+	text-align: center;
 
 }
 
 .column {
-    flex-basis: 300px;
-    flex-grow: 1;
-    margin: 15px;
-    border: 4px solid none;
-    padding: 0.5px;
+	flex-basis: 300px;
+	flex-grow: 1;
+	margin: 15px;
+	border: 4px solid none;
+	padding: 0.5px;
 
 }
 
-.column2{
-    flex-grow: 1;
-    padding-top: 5%;
+.column2 {
+	flex-grow: 1;
+	padding-top: 5%;
 }
 
 /*
@@ -351,52 +360,486 @@ p {
 */
 
 .row {
-    float: left;
-    width: 37%;
+	float: left;
+	width: 45%;
 }
 
 .row h3 {
-    font-family: 'Copperplate';
-    font-style: normal;
-    font-weight: lighter;
-    text-align: right;
+	font-family: 'Copperplate';
+	font-style: normal;
+	font-weight: lighter;
+	text-align: right;
 
 }
 
 /* Clear floats after the columns */
 .column:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .section .column p {
-    font-family: 'Avenir Next';
-    font-style: normal;
-    font-weight: 400;
-    text-align: left;
-    font-size: 1.25vw;
+	font-family: 'Avenir Next';
+	font-style: normal;
+	font-weight: 400;
+	text-align: left;
+	font-size: 1em;
 }
 
 .column1 {
-    flex-basis: 200px;
-    flex-grow: 1;
-    padding: 20px;
-    margin: 50px;
+	flex-basis: 200px;
+	flex-grow: 1;
+	padding: 20px;
+	margin: 50px;
 }
 
-.burger{
-    display: none;
+.burger {
+	display: none;
 }
+
+/* - - - Footer - - - */
+
+footer {
+	padding: 2vw;
+	background-color: #959595;
+}
+
+footer #sectionwrapper {
+	display: flex;
+	background-color: #959595;
+}
+
+.column_left,
+.column_center,
+.column_right {
+	flex-grow: 1;
+	background-color: #959595;
+	color: white;
+	width: 45vw;
+	padding: 2vw;
+}
+
+.kontakt a {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
+}
+
+.kontakt a:active,
+.kontakt a:visited {
+	color: white;
+}
+
+.tider {
+	display: block;
+}
+
+.tider h1 {
+	margin: 0vw;
+}
+
+
+.kort img {
+	width: 100%;
+}
+
+footer {
+	flex-basis: 50vw;
+}
+
+
+.kontakt p,
+.tider p,
+.kort p {
+	text-align: left;
+	font-size: 1.3em;
+}
+
+.tider {
+	margin: 1vw 0vw;
+	padding: 0.5vw 0vw;
+}
+
+
+.kort,
+.so_me {
+	flex-basis: 10vw;
+}
+
+
+.so_me {
+	margin: 1vw 0vw;
+	padding: 0.5vw 0vw;
+}
+
+.instagram a,
+.facebook a,
+.pinterest a {
+	padding: 0vw;
+}
+
+.so_me img {
+	width: 15%;
+	display: inline-block;
+	margin: 0vw 1vw 0vw 0vw;
+}
+
+
+/* - - - Footer SLUT - - - */
+
 
 /*Media Query*/
 
-@media only screen and (max-width: 750px){
-    .menu{
-        display: none;
-    }
-    .burger{
-        display: block;
-    }
+@media only screen and (max-width: 920px) {
+	#indhold {
+		width: 80vw;
+	}
 
+	#logo {
+		width: 40%;
+		padding: 20% 30%
+	}
+
+	.produkt1 .billede img {
+		max-width: 80vw;
+		max-height: 40vw;
+	}
+
+	/*	- - - Footer - - - */
+
+	.kontakt p,
+	.tider p,
+	.kort p {
+		font-size: 1.1em;
+	}
+
+	.tider h1 {
+		margin: 0vw;
+	}
+
+	.column_left,
+	.column_center,
+	.column_right {
+		padding: 2vw;
+	}
+
+	.row {
+		width: 50%;
+	}
+
+	.so_me img {
+		width: 24%;
+	}
+
+	/*	- - - Footer Slut - - - */
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+	/* ---Produkter ---	*/
+	.menu {
+		display: none;
+		padding: 2em 2em 2em 5em;
+	}
+
+	.menu button {
+		display: flex;
+		margin: 0.5em 0em 0.5em 0em;
+		padding: 1em;
+		cursor: pointer;
+	}
+
+	.burger {
+		display: block;
+		margin: 0em 9em;
+	}
+
+	.burgerknap {
+		margin: 0em 0em 0em 1.25em;
+		border: 0.5em solid bababa;
+		border-radius: 6%;
+		height: 2.05em;
+		width: 14em;
+		font-size: 1.5em;
+		font-family: 'Copperplate';
+		font-weight: 300;
+		cursor: pointer;
+	}
+
+	/*
+	.burgerknap:hover {
+		background-color: #bababa;
+		color: white;
+		text-decoration: underline;
+	}
+*/
+
+	/*
+	.open_kf {
+		animation-name: openSlide;
+		overflow: hidden;
+		animation-duration: 3s;
+	}
+
+	@keyframes openSlide {
+		from {
+			margin-top: 300%;
+			height: 0%;
+		}
+
+		to {
+			margin-top: 0%;
+			height: 100%;
+		}
+	}
+	
+	.close_kf {
+		animation-name: closeSlide;
+		animation-duration: 3s;
+	}
+
+	@keyframes closeSlide {
+		from {
+			margin-top: 300%;
+			height: 0%;
+		}
+
+		to {
+			margin-top: 0%;
+			height: 100%;
+		}
+	}
+*/
+
+	#indhold {
+		width: 28em;
+	}
+
+	.produkt1 {
+		flex-direction: column;
+	}
+
+	.beskrivelse,
+	.pris {
+		padding: 0em 2em 1em 2em;
+	}
+
+	.beskrivelse p,
+	.pris p {
+		font-size: 0.9em;
+	}
+
+	#luk button {
+		right: -0.8em;
+		width: 0em;
+		height: 1.25em;
+		font-size: 4em;
+		padding-left: 0.4em;
+		text-align: center;
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.logo {
+		margin: 1em 13.5em 5em 13.5em;
+	}
+
+	.logo img {
+		max-width: 15em;
+		max-height: 15em;
+	}
+
+	.hovedmenu {
+		display: flex;
+		margin: 2.5vw 15vw;
+	}
+
+	/*	--- Produkter SLUT ---*/
+
+
+	/*	--- Forside --- */
+	#logo {
+		width: 60%;
+		padding: 25% 19.88%
+	}
+
+	/*	--- Forside SLUT --- */
+
+	/*	--- Om Kunstner --- */
+	#om p {
+		font-size: 1em;
+	}
+
+	/*	--- Om Kunstner SLUT--- */
+
+	/*	- - - Footer - - - */
+	.kontakt p,
+	.tider p,
+	.kort p {
+		font-size: 1.15em;
+	}
+
+	footer #sectionwrapper {
+		display: contents;
+	}
+
+	.column_left,
+	.column_center,
+	.column_right {
+		display: inline-block;
+		width: 85vw;
+		padding: 3vw;
+	}
+
+	.so_me .kort {
+		flex-basis: 50vw;
+	}
+
+	.kort img {
+		width: 100%;
+	}
+
+	.kontakt,
+	.tider,
+	.so_me {
+		padding: 1vw;
+		margin: 2vw 0vw;
+	}
+
+	.instagram img,
+	.facebook img,
+	.pinterest img {
+		width: 15%;
+		text-align: right;
+	}
+
+
+	.row {
+		width: 40%;
+	}
+
+	/*	- - - Footer Slut - - - */
+}
+
+@media only screen and (max-width: 661px) {
+	footer {
+		flex-direction: column;
+	}
+
+	.hovedmenu {
+		display: flex;
+		margin: 1.2vw 10vw 1.2vw 10vw;
+		padding: 0vw 2vw 0vw 2vw;
+	}
+
+	.hovedmenu li {
+		padding: 0.5vw;
+		margin: 0vw 1vw;
+	}
+
+	.burger {
+		margin: 0em 6.5em;
+	}
+
+	#luk button {
+		right: -1.25em;
+		width: 0em;
+		height: 1.25em;
+		font-size: 3.3em;
+		padding-left: 0.35em;
+	}
+
+	.logo img {
+		margin: 0em;
+		padding: 0.1em;
+		width: 50vw;
+	}
+
+	.logo {
+		left: 0.5vw;
+		margin: 1vw 30vw 15vw 30vw;
+	}
+
+	/*	--- Video ---*/
+	iframe {
+		max-width: 100%;
+	}
+
+	/*	--- Video Slut---*/
+}
+
+@media only screen and (max-width: 613px) {
+	.hovedmenu {
+		display: flex;
+		margin: 5vw 3vw
+	}
+
+	.hovedmenu li {
+		padding: 0vw;
+		margin: 0vw;
+	}
+
+	.hovedmenu li a {
+		font-size: 1.38em;
+		padding: 1.5vw 3.5vw;
+	}
+
+	.burgerknap {
+		font-size: 1.2em;
+		margin: 0em;
+	}
+
+	.logo {
+		left: 0.5em;
+		margin: 1em 7em 5em 7em;
+	}
+
+	.logo img {
+		max-height: 40vw;
+	}
+}
+
+/* - - - Footer - - -*/
+footer {
+	flex-basis: 50vw;
+}
+
+
+/* - - - Footer Slut - - -*/
+
+@media only screen and (max-width: 529px) {
+	footer #sectionwrapper {
+		display: contents;
+	}
+
+	.column_left,
+	.column_right {
+		/*	flex-grow: 0;*/
+		/*	flex-wrap: wrap;*/
+		/*	flex-direction: column;*/
+		/*	flex-basis: 50vw;*/
+		display: inline-block;
+	}
+
+	.kontakt p,
+	.tider p,
+	.kort p {
+		font-size: 1.3em;
+	}
+
+	.tider,
+	.so_me {
+		padding: 1vw;
+		margin-bottom: 2vw;
+	}
+
+	.kort {
+		flex-basis: 20vw;
+	}
 }
