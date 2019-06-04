@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -40,55 +40,67 @@
                 <p>Min kunst indebærer en tiltro til abstraktionens kraft, det komplekse og subtile, hvor noget uartikuleret i os bliver mødt med en inspirerende energi. Med min kunst ønsker jeg med en visuel fortælling, at bevæge beskueren med mit verdenssyn om naturen i mennesket – og mennesket i naturen. Det er en fortælling om, at vi mennesker er natur og en del af et kompliceret universelt mønster, hvor omgivelserne på et energimæssigt plan smelter sammen med sansningen, følelser og tanker.</p>
             </div>
             <div class="column">
-                <h1>video placeres her</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/UnyPlNUiNmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
             </div>
         </div>
 
 
-        <div class="section">
-            <div class="column1">
-                    <div id="map" style="width:100%; height:500px;"></div>
-            </div>
-
-            <div class="column2">
-                <h1>Åbningstider</h1>
-                <div class="row">
-                    <h3>Mandag</h3>
-                    <h3>Tirsdag</h3>
-                    <h3>Onsdag</h3>
-                    <h3>Torsdag</h3>
-                    <h3>Fredag</h3>
-                </div>
-                <div class="row">
-                    <h3>12-14</h3>
-                    <h3>15-18</h3>
-                    <h3>15-18</h3>
-                    <h3>15-18</h3>
-                    <h3>12-14</h3>
-                </div>
-            </div>
-        </div>
     </section>
 
-<script>
-        // Initialize google maps
-        function myMap() {
-            var myCenter = new google.maps.LatLng(55.766788, 12.240745);
-            var mapCanvas = document.getElementById("map");
-            var mapOptions = {
-                center: myCenter,
-                zoom: 12
-            };
-            var map = new google.maps.Map(mapCanvas, mapOptions);
-            var marker = new google.maps.Marker({
-                position: myCenter
-            });
-            marker.setMap(map);
-        }
-
-    </script>
-
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAfptcA4G2GqcBzZXeKnelQ57wNq2J-ns&callback=myMap"></script>
-</body>
 
-</html>
+
+    <footer>
+        <div id="sectionwrapper">
+            <div class="column_left">
+                <div class="kontakt">
+                    <h1><b>Kontakt</b></h1>
+                    <a href="tel:+4528911998">
+                        <p><b>Telefon:</b> +45 28 91 19 98</p>
+                    </a>
+                    <a href="mailto:studio@rikkedarling.com">
+                        <p><b>Mail:</b> studio@rikkedarling.com</p>
+                    </a>
+                </div>
+
+                <div class="so_me">
+                    <a href="https://www.instagram.com/artistrikkedarling/?hl=da" class="instagram"><img src="billeder/insta.svg" alt="Link til instagram"></a>
+
+                    <a href="https://www.facebook.com/rikke.darling.3?ref=ts&fref=ts" class="facebook"><img src="billeder/facebook.svg" alt="link til facebook"></a>
+
+                    <a href="https://www.pinterest.com/search/boards/?q=rikke+darling" class="pinterest"><img src="billeder/pinterest.svg" alt="link til pinterst"></a>
+                </div>
+            </div>
+            <div class="column_center">
+                <div class="tider">
+                    <h1><b>Åbningstider</b></h1>
+                    <div class="row">
+                        <p>Mandag</p>
+                        <p>Tirsdag</p>
+                        <p>Onsdag</p>
+                        <p>Torsdag</p>
+                        <p>Fredag</p>
+                    </div>
+                    <div class="row">
+                        <p>12-14</p>
+                        <p>15-18</p>
+                        <p>15-18</p>
+                        <p>15-18</p>
+                        <p>12-14</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column_right">
+                <div class="kort">
+                    <h1><b>Find Darling</b></h1>
+                    <img src="billeder/Artboard_kort.svg" alt="infograik kort over studiets lokalitet">
+                    <p><b>Adresse</b></p>
+                    <p>Strandboulevarden 67, København Ø 2100</p>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+</body></html>
