@@ -275,7 +275,7 @@ h2 {
 	grid-template-columns: repeat(auto-fill, minmax(300px, 0.98fr));
 	margin: 10vw;
 	margin-top: 0.5vw;
-	position: center;
+/*	position: center;*/
 
 }
 
@@ -559,7 +559,7 @@ footer {
 
 	.burgerknap {
 		margin: 0em 0em 0em 1.25em;
-		border: 0.5em solid bababa;
+		border: 0.03em solid;
 		border-radius: 6%;
 		height: 2.05em;
 		width: 14em;
@@ -769,6 +769,7 @@ footer {
 	/*	--- Video ---*/
 	iframe {
 		max-width: 100%;
+        
 	}
 
 	/*	--- Video Slut---*/
