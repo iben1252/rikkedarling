@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -37,23 +37,23 @@
         </nav>
 
         <div class="burger">
-            burger
+            <button class="burgerknap">FILTRER PRODUKTTYPE</button>
         </div>
         <nav class="menu">
-            <button class="filter" data-produkt="Limited">Limited edition</button>
+            <button class="filter" data-produkt="alle">Alle</button>
             <button class="filter" data-produkt="Puder">Puder</button>
             <button class="filter" data-produkt="Krukker">Krukker</button>
             <button class="filter" data-produkt="Skamler">Skamler</button>
             <button class="filter" data-produkt="Plakater">Plakater</button>
             <button class="filter" data-produkt="Tæpper">Tæpper</button>
             <button class="filter" data-produkt="Ur">Ur</button>
-            <button class="filter" data-produkt="Akustikplader">Akustikplader</button>
             <button class="filter" data-produkt="Fliser">Fliser</button>
             <button class="filter" data-produkt="Tøj">Tøj</button>
+            <button class="filter" data-produkt="Limited">Limited edition</button>
         </nav>
     </header>
 
-   <div id="popup">
+    <div id="popup">
         <div id="luk"><button>X</button></div>
         <div id="indhold"></div>
     </div>
@@ -69,7 +69,6 @@
 
 
     <script>
-
         let produkt = [];
         let filter = "alle";
 
@@ -154,34 +153,27 @@
 
             getJson();
 
-            document.querySelector(".burger").addEventListener("click", openBurger);
+            document.querySelector(".burgerknap").addEventListener("click", openBurger);
 
 
-            function openBurger(){
-                document.querySelector(".menu").style.display="block";
-                document.querySelector("button").style.display="block";
-                closeBurger();
+            function openBurger() {
+                document.querySelector(".menu").style.display = "block";
+                document.querySelector(".filter").style.display = "block";
+                //				document.querySelector(".burgerknap").classList.add(".open_kf");
+                document.querySelector(".burgerknap").addEventListener("click", closeBurger);
+                document.querySelector(".burgerknap").removeEventListener("click", openBurger);
 
-                document.querySelector(".burger").removeEventListener("click", openBurger);
-                document.querySelector(".burger").addEventListener("click", closeBurger);
             }
 
 
-            function closeBurger(){
-                document.querySelector(".menu").style.display="none";
-                document.querySelector("button").style.display="none";
-                document.querySelector(".burger").addEventListener("click", openBurger);
-                document.querySelector(".burger").addEventListener("click", closeBurger);
-
-
-
-
+            function closeBurger() {
+                document.querySelector(".menu").style.display = "none";
+                document.querySelector(".filter").style.display = "none";
+                document.querySelector(".burgerknap").addEventListener("click", openBurger);
+                document.querySelector(".burgerknap").removeEventListener("click", closeBurger);
 
             }
         }
-
     </script>
 
-</body>
-
-</html>
+</body></html>
