@@ -2,114 +2,110 @@
 <html lang="da">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rikke Darling</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rikke Darling</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="keywords" content="mikro-makro,art and design,Rikke Darling">
 </head>
 
+<header>
+	<nav>
+		<ul>
+			<li><a href="om_darling.html">Om Rikke Darling</a></li>
+			<li><a href="produkter.html">Produkter</a></li>
+		</ul>
+	</nav>
 
+</header>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="om_darling.html">Om Rikke Darling</a></li>
-                <li><a href="produkter.html">Produkter</a></li>
-            </ul>
-        </nav>
 
-    </header>
+	<div id="sectionwrapper">
+		<div id="logo">
+			<img src="logo_2@36x-100.svg" alt="">
+		</div>
+	</div>
 
-    <div id="sectionwrapper">
-        <div id="logo">
-            <img src="logo_2@36x-100.svg" alt="">
-        </div>
-    </div>
+	<div id="splash">
 
-    <div id="splash">
+		<div class="slideshow-container">
 
-        <div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="billeder/citat@36x-100.svg" style="height:100%" alt="slide">
+			</div>
 
-            <div class="mySlides fade">
-                <img src="billeder/citat@36x-100.svg" style="height:100%" alt="slide">
-            </div>
+			<div class="mySlides fade">
+				<img src="billeder/citat2@36x-100.svg" style="height:100%" alt="slide">
+			</div>
 
-            <div class="mySlides fade">
-                <img src="billeder/citat2@36x-100.svg" style="height:100%" alt="slide">
-            </div>
+			<div class="mySlides fade">
+				<img src="billeder/citat3@36x-100.svg" style="height:100%" alt="slide">
+			</div>
 
-            <div class="mySlides fade">
-                <img src="billeder/citat3@36x-100.svg" style="height:100%" alt="slide">
-            </div>
+			<div class="mySlides fade">
+				<img src="billeder/citat@36x-100.svg" style="width:100%" alt="slide">
+			</div>
 
-            <div class="mySlides fade">
-                <img src="billeder/citat@36x-100.svg" style="width:100%" alt="slide">
-            </div>
+			<div class="mySlides fade">
+				<img src="billeder/citat2@36x-100.svg" style="width:100%" alt="slide">
+			</div>
 
-            <div class="mySlides fade">
-                <img src="billeder/citat2@36x-100.svg" style="width:100%" alt="slide">
-            </div>
+			<div class="mySlides fade">
+				<img src="billeder/citat3@36x-100.svg" style="width:100%" alt="slide">
+			</div>
 
-            <div class="mySlides fade">
-                <img src="billeder/citat3@36x-100.svg" style="width:100%" alt="slide">
-            </div>
+			<div class="mySlides fade">
+				<img src="billeder/citat@36x-100.svg" style="width:100%" alt="slide">
+			</div>
 
-            <div class="mySlides fade">
-                <img src="billeder/citat@36x-100.svg" style="width:100%" alt="slide">
-            </div>
-
-        </div>
+		</div>
 
 
-        <div style="text-align:center">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+		<div style="text-align:center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
 
 
-        </div>
+		</div>
 
-    </div>
+	</div>
 
-    <script>
-        let slideIndex = 0;
-        showSlides();
+	<script>
+		let slideIndex = 0;
+		showSlides();
 
-        function showSlides() {
-            let i;
-            let slides = document.querySelectorAll(".mySlides");
-            let dots = document.querySelectorAll(".dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 3000); // Change image every 3 seconds
-        }
-
-    </script>
-</body>
-
-</html>
+		function showSlides() {
+			let i;
+			let slides = document.querySelectorAll(".mySlides");
+			let dots = document.querySelectorAll(".dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {
+				slideIndex = 1
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+			setTimeout(showSlides, 3000); // Change image every 3 seconds
+		}
+	</script>
+</body></html>

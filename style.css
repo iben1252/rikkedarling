@@ -275,7 +275,7 @@ h2 {
 	grid-template-columns: repeat(auto-fill, minmax(300px, 0.98fr));
 	margin: 10vw;
 	margin-top: 0.5vw;
-/*	position: center;*/
+	position: center;
 
 }
 
@@ -559,7 +559,7 @@ footer {
 
 	.burgerknap {
 		margin: 0em 0em 0em 1.25em;
-		border: 0.03em solid;
+		border: 0.5em solid bababa;
 		border-radius: 6%;
 		height: 2.05em;
 		width: 14em;
@@ -769,7 +769,6 @@ footer {
 	/*	--- Video ---*/
 	iframe {
 		max-width: 100%;
-        
 	}
 
 	/*	--- Video Slut---*/
@@ -778,7 +777,7 @@ footer {
 @media only screen and (max-width: 613px) {
 	.hovedmenu {
 		display: flex;
-		margin: 5vw 3vw
+		margin: 7vw 5vw
 	}
 
 	.hovedmenu li {
@@ -787,18 +786,17 @@ footer {
 	}
 
 	.hovedmenu li a {
-		font-size: 1.38em;
-		padding: 1.5vw 3.5vw;
+		font-size: 5vw;
+		padding: 1vw 2vw;
 	}
 
 	.burgerknap {
-		font-size: 1.2em;
+		font-size: 3.5vw;
 		margin: 0em;
 	}
 
 	.logo {
-		left: 0.5em;
-		margin: 1em 7em 5em 7em;
+		margin: 1vw 7vw 12.5vw 7em;
 	}
 
 	.logo img {
@@ -843,4 +841,119 @@ footer {
 	.kort {
 		flex-basis: 20vw;
 	}
+
+	.produkt1 {
+		margin: 0.5vw;
+		padding: 2vw;
+		flex-wrap: wrap;
+		font-family: "Copperplate";
+		border-color: #959595;
+		font-style: normal;
+		font-weight: lighter;
+		flex-direction: row;
+		display: flex;
+		flex-basis: 60vw;
+		cursor: auto;
+	}
+
+	.produkt1 .billede,
+	.tekst {
+		flex-grow: 2;
+		flex-basis: 30vw;
+	}
+
+
+	.produkt1 .billede img {
+		max-height: 65%;
+		max-width: 90%;
+	}
+
+	.produkt1 .beskrivelse .tekst {
+		display: flex;
+	}
+
+	.beskrivelse {
+		text-align: left;
+		flex-basis: 20vw;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+
+	/* --- Forside --- */
+	nav ul li a {
+		font-size: 5vw;
+		padding: 0vw 0vw;
+	}
+
+	nav {
+		padding: 3vw 1vw;
+		margin: 3vw 3.5vw;
+	}
+
+	/* --- Forside Slut --- */
+
+	/* --- Produkter --- */
+	.hovedmenu li a {
+		font-size: 5vw;
+		padding: 4vw 2.5vw;
+	}
+
+	.hovedmenu {
+		margin: 10vw 7vw 2vw;
+	}
+
+	.logo {
+		margin: 5vw 25vw 10vw;
+	}
+
+	.burger {
+		margin: auto;
+	}
+
+	.burgerknap {
+		height: 12.5vw;
+		width: 58vw;
+		font-size: 4.3vw;
+	}
+
+	.menu {
+		margin: 0vw;
+		padding: 1vw 16vw 1vw;
+	}
+
+	.menu button {
+		font-size: 7vw;
+		margin: 5vw;
+		padding: 2vw;
+		text-align: left;
+	}
+
+	#liste {
+		margin: 0vw;
+		padding: 0vw;
+	}
+
+	.produkt {
+		margin: 10vw;
+		padding: 5vw;
+	}
+
+	#indhold {
+		width: 90vw;
+	}
+
+	.produkt1 {
+		margin: 0vw;
+		padding: 6vw;
+	}
+
+	.produkt1 .billede img {
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	/* --- Produkter Slut --- */
+
+
 }

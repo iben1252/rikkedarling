@@ -2,97 +2,98 @@
 <html lang="da">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Produkter af Rikke Darling</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Produkter af Rikke Darling</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="keywords" content="mikro-makro,art and design,Rikke Darling">
 </head>
 
 <body>
 
 
 
-    <header>
-        <nav class="logo">
-            <a href="index.html">
-                <img src="logo.jpg" alt="Logo: Darling Art & Design">
-            </a>
-        </nav>
+	<header>
+		<nav class="logo">
+			<a href="index.html">
+				<img src="logo.jpg" alt="Logo: Darling Art & Design">
+			</a>
+		</nav>
 
-        <nav class="hovedmenu">
-            <ul>
-                <li><a href="om_darling.html">Om Rikke Darling</a></li>
-                <li><a href="produkter.html">Produkter</a></li>
+		<nav class="hovedmenu">
+			<ul>
+				<li><a href="om_darling.html">Om Rikke Darling</a></li>
+				<li><a href="produkter.html">Produkter</a></li>
 
-            </ul>
-        </nav>
+			</ul>
+		</nav>
 
-        <div class="burger">
-            <button class="burgerknap">FILTRER PRODUKTTYPE</button>
-        </div>
-        <nav class="menu">
-            <button class="filter" data-produkt="alle">Alle</button>
-            <button class="filter" data-produkt="Puder">Puder</button>
-            <button class="filter" data-produkt="Krukker">Krukker</button>
-            <button class="filter" data-produkt="Skamler">Skamler</button>
-            <button class="filter" data-produkt="Plakater">Plakater</button>
-            <button class="filter" data-produkt="Tæpper">Tæpper</button>
-            <button class="filter" data-produkt="Ur">Ur</button>
-            <button class="filter" data-produkt="Fliser">Fliser</button>
-            <button class="filter" data-produkt="Tøj">Tøj</button>
-            <button class="filter" data-produkt="Limited">Limited edition</button>
-        </nav>
-    </header>
+		<div class="burger">
+			<button class="burgerknap">FILTRER PRODUKTTYPE</button>
+		</div>
+		<nav class="menu">
+			<button class="filter" data-produkt="alle">Alle</button>
+			<button class="filter" data-produkt="Puder">Puder</button>
+			<button class="filter" data-produkt="Krukker">Krukker</button>
+			<button class="filter" data-produkt="Skamler">Skamler</button>
+			<button class="filter" data-produkt="Plakater">Plakater</button>
+			<button class="filter" data-produkt="Tæpper">Tæpper</button>
+			<button class="filter" data-produkt="Ur">Ur</button>
+			<button class="filter" data-produkt="Fliser">Fliser</button>
+			<button class="filter" data-produkt="Tøj">Tøj</button>
+			<button class="filter" data-produkt="Limited">Limited edition</button>
+		</nav>
+	</header>
 
-    <div id="popup">
-        <div id="luk"><button>X</button></div>
-        <div id="indhold"></div>
-    </div>
-
-
-    <main>
-        <div class="overskrift">
-            <h2></h2>
-        </div>
-        <div id="liste"></div>
-
-    </main>
+	<div id="popup">
+		<div id="luk"><button>X</button></div>
+		<div id="indhold"></div>
+	</div>
 
 
-    <script>
-        let produkt = [];
-        let filter = "alle";
+	<main>
+		<div class="overskrift">
+			<h2></h2>
+		</div>
+		<div id="liste"></div>
+
+	</main>
 
 
-        document.addEventListener("DOMContentLoaded", start);
-
-        function start() {
-            let dest = document.querySelector("#liste");
-
-            async function getJson() {
-                let jsonData = await fetch("http://ibenbording.dk/kea/2_sem_eksamen/rikke_darling/wordpress/wp-json/wp/v2/produkter?per_page=100");
-                produkt = await jsonData.json();
-                produkt.sort((a, b) => {
-                    return a.type.localeCompare(b.type);
-                });
-                visProdukt();
-            }
+	<script>
+		let produkt = [];
+		let filter = "alle";
 
 
-            function visProdukt() {
-                dest.innerHTML = "";
-                produkt.forEach((alleProdukt) => {
-                    if (filter == "alle" || filter == alleProdukt.kategori) {
-                        let template = `
+		document.addEventListener("DOMContentLoaded", start);
+
+		function start() {
+			let dest = document.querySelector("#liste");
+
+			async function getJson() {
+				let jsonData = await fetch("http://ibenbording.dk/kea/2_sem_eksamen/rikke_darling/wordpress/wp-json/wp/v2/produkter?per_page=100");
+				produkt = await jsonData.json();
+				produkt.sort((a, b) => {
+					return a.type.localeCompare(b.type);
+				});
+				visProdukt();
+			}
+
+
+			function visProdukt() {
+				dest.innerHTML = "";
+				produkt.forEach((alleProdukt) => {
+					if (filter == "alle" || filter == alleProdukt.kategori) {
+						let template = `
                         <div class="produkt">
                             <div class="billede">
                                 <img src="${alleProdukt.image.guid}">
@@ -100,12 +101,12 @@
                                 <h2>${alleProdukt.title.rendered}</h2>
                             <p><strong></strong> ${alleProdukt.pris} DKK</p>
                         </div>`;
-                        dest.insertAdjacentHTML("beforeend", template);
-                        dest.lastElementChild.addEventListener("click", åbn);
+						dest.insertAdjacentHTML("beforeend", template);
+						dest.lastElementChild.addEventListener("click", åbn);
 
-                        function åbn() {
-                            console.log("åbn kører");
-                            document.querySelector("#indhold").innerHTML = `
+						function åbn() {
+							console.log("åbn kører");
+							document.querySelector("#indhold").innerHTML = `
                             <div class="produkt1">
                                 <div class="billede">
                                     <img src="${alleProdukt.image.guid}">
@@ -122,58 +123,58 @@
                                     </div>
                                 </div>
                             </div>`;
-                            document.querySelector("#popup").style.display = "block";
+							document.querySelector("#popup").style.display = "block";
 
-                        }
+						}
 
-                    }
+					}
 
-                })
-            }
+				})
+			}
 
-            document.querySelector("#luk button").addEventListener("click", () => {
-                document.querySelector("#popup").style.display = "none";
-            })
-
-
-            document.querySelectorAll(".filter").forEach(elm => {
-                elm.addEventListener("click", filtrering);
-            })
-
-            function filtrering() {
-                console.log("filtrerer");
-                filter = this.getAttribute("data-produkt");
-                document.querySelector("h2").textContent = this.textContent;
-                document.querySelectorAll(".filter").forEach(elm => {
-                    elm.classList.remove("valgt");
-                })
-                this.classList.add("valgt");
-                visProdukt();
-            }
-
-            getJson();
-
-            document.querySelector(".burgerknap").addEventListener("click", openBurger);
+			document.querySelector("#luk button").addEventListener("click", () => {
+				document.querySelector("#popup").style.display = "none";
+			})
 
 
-            function openBurger() {
-                document.querySelector(".menu").style.display = "block";
-                document.querySelector(".filter").style.display = "block";
-                //				document.querySelector(".burgerknap").classList.add(".open_kf");
-                document.querySelector(".burgerknap").addEventListener("click", closeBurger);
-                document.querySelector(".burgerknap").removeEventListener("click", openBurger);
+			document.querySelectorAll(".filter").forEach(elm => {
+				elm.addEventListener("click", filtrering);
+			})
 
-            }
+			function filtrering() {
+				console.log("filtrerer");
+				filter = this.getAttribute("data-produkt");
+				document.querySelector("h2").textContent = this.textContent;
+				document.querySelectorAll(".filter").forEach(elm => {
+					elm.classList.remove("valgt");
+				})
+				this.classList.add("valgt");
+				visProdukt();
+			}
+
+			getJson();
+
+			document.querySelector(".burgerknap").addEventListener("click", openBurger);
 
 
-            function closeBurger() {
-                document.querySelector(".menu").style.display = "none";
-                document.querySelector(".filter").style.display = "none";
-                document.querySelector(".burgerknap").addEventListener("click", openBurger);
-                document.querySelector(".burgerknap").removeEventListener("click", closeBurger);
+			function openBurger() {
+				document.querySelector(".menu").style.display = "block";
+				document.querySelector(".filter").style.display = "block";
+				//				document.querySelector(".burgerknap").classList.add(".open_kf");
+				document.querySelector(".burgerknap").addEventListener("click", closeBurger);
+				document.querySelector(".burgerknap").removeEventListener("click", openBurger);
 
-            }
-        }
-    </script>
+			}
+
+
+			function closeBurger() {
+				document.querySelector(".menu").style.display = "none";
+				document.querySelector(".filter").style.display = "none";
+				document.querySelector(".burgerknap").addEventListener("click", openBurger);
+				document.querySelector(".burgerknap").removeEventListener("click", closeBurger);
+
+			}
+		}
+	</script>
 
 </body></html>
